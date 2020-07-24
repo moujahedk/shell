@@ -1,0 +1,11 @@
+NAMES=( John Eric Jessica )
+# write your code here
+NUMBERS=(1 2 3 )
+STRINGS=("hello" "world")
+NumbersOfNames=${#NAMES[@]}
+second_name=${NAMES[1]}
+
+# 1 2 3
+# hello world
+# the number of names listen in the names array:3
+#the second name on the NAMES list is : Eric
