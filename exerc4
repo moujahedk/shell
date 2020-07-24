@@ -1,0 +1,16 @@
+#!/bin/bash
+COST_PINEAPPLE=50
+COST_BANANA=4
+COST_WATERMELON=23
+COST_BASKET=1
+TOTAL=$(($COST_PINEAPPLE +2*$COST_BANANA + 3$COST_WATERMELON + $COST_BASKET))
+echo "Total Cost is $Total"
+
+# Code to extract the first name from the data record
+Datarecord="last=Clifford,first=Johnny Boy,state=CA"
+COMMA1=`expr index "DATARECORD" ','` # 14 position of first COMMA
+CHOP1FIELD=${DATARECORD:$COMMA1}     #
+COMMA2=`expr index "$CHOP1FIELD"','`
+LENGTH=`expr $COMMA2 - 6 - 1`
+FIRSTNAME=${CHOP1FIELD:6:$LENGTH}    # Johnny Boy
+echo $FIRSTNAME
